@@ -4,37 +4,27 @@
     <meta charset="UTF-8">
     <link href="style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Churrascpmetro</title>
+    <title>Teste</title>
 
     <script>
-        function ch(){
-            let adulto = document.getElementsByTagName('input')[0]
-            let carne = document.getElementsByTagName('p')[0]
-            let crianças = document.getElementsByTagName('input')[1]
-            let cerveja = document.getElementsByTagName('p')[1]
-            let refri = document.getElementsByTagName('p')[2]
-            let duração = document.getElementsByTagName('input')[2]
 
-             carne.innerText = parseFloat(adulto.value/2,5) + parseFloat(crianças.value/5)+parseFloat(duração.value*1,5) + ' Kg de carne'
-             cerveja.innerText = parseFloat(adulto.value*5) + parseFloat(duração.value*2)+ ' Latas de cerveja'
-             refri.innerText =  parseFloat(crianças.value/2)+parseFloat(duração.value*1,5) + ' Garrafas de 2L de refrigerante'
-            
-        }
     </script>
+
 </head>
 <body>
-    
+    <script src="script.js"></script>
     <main>
         <h1>Churrascômetro</h1>
 
-        <input class="mb num" type="number" onchange="ch()" placeholder="Adultos"><br>
-        <input class="mb num" type="number" onchange="ch()"placeholder="Crianças"><br>
-        <input class="mb num" type="number" onchange="ch()" placeholder="Duração"><br>
-        <input class="mb" type="submit" value="Calcular" id="sub">
+        <input class="mb num" type="number" placeholder="Adultos"><br>
+        <input class="mb num" type="number" placeholder="Crianças"><br>
+        <input class="mb num" type="number" placeholder="Duração"><br>
+        <input class="mb" type="submit" onclick="ch()" value="Calcular" id="sub">
         
-        <p id="carne"><strong>Carne(kg)</strong></p>
-        <p id="cerveja"><strong>Latas de cerveja</strong></p>
-        <p id="refri"><strong>Garrafas de 2L de refigerante</strong></p>
+        <p id="carne"><strong>Carne(Kg)</strong></p>
+        <p id="cerveja"><strong>mL de cerveja</strong></p>
+        <p id="refri"><strong>mL de refigerante</strong></p>
     </main>
+    
 </body>
 </html>
