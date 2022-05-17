@@ -1,30 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <link href="style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste</title>
-
-    <script>
-
-    </script>
+    <title>Churrascômetro</title>
 
 </head>
-<body>
-    <script src="script.js"></script>
-    <main>
-        <h1>Churrascômetro</h1>
 
-        <input class="mb num" type="number" placeholder="Adultos"><br>
-        <input class="mb num" type="number" placeholder="Crianças"><br>
-        <input class="mb num" type="number" placeholder="Duração"><br>
-        <input class="mb" type="submit" onclick="ch()" value="Calcular" id="sub">
-        
-        <p id="carne"><strong>Carne(Kg)</strong></p>
-        <p id="cerveja"><strong>mL de cerveja</strong></p>
-        <p id="refri"><strong>mL de refigerante</strong></p>
-    </main>
-    
+<body>
+    <!-- 
+        carne, frango, linguiça, coração e pão de alho. Agua, refrigerante e cerveja
+     -->
+    <div id="full">
+
+        <div>
+            <h1 id="h1desc">Descrição e algumas observações</h1>
+            <br>
+            <p id="desc">Aqui está um protótipo de um Churrascômetro, não sei se os valores<br>
+               estão certos, mas se não estiverem eu faço a manutenção depois. Tomei<br>
+               como base: cada adulto come 400gr (dividi em 188 para carne e o resto<br>
+               igual entre linguiça, pão, coração e frango), bebe 1200ml de cerveja <br>
+               e 1000ml de água com refrigerante. E os não-adultos correspondem á crianças<br>
+               e adolescentes, no qual comem e bebem metade dos adultos e não consumem (amém)<br>
+               cerveja. Tudo isso para um churrasco de até 6 horas.<br><br>
+               
+               Quando passa de 6 horas cada adulto consome 650 gramas de comida(330 para carne<br>
+               e o resto igual para linguiça, coração, pão e frango), 2000ml de cerveja e 1500ml<br>
+               de água com refrigerante. Seguindo a mesma lógica: não-adultos consomem metade dos <br>
+               adultos. A conta do refrigerante e água pode errar um pouco se você fizer a conta, porque<br>
+               dei ênfase aos não-adultos, pois os adultos já bebem cerveja. Vou fazendo manutenção com <br>
+               o tempo, seja para refazer design, ajeitar na conta, colocar mais detalhes (comida e bebidas<br>
+               novas), descrições novas etc. Valeuuuu!!! 
+            </p>
+        </div>
+
+        <div id="Chu">
+
+            <h1 id="h1Chu">ℂ𝕙𝕦𝕣𝕣𝕒𝕤𝕔𝕠𝕞𝕖𝕥𝕣𝕠 𝕕𝕠 𝔽𝕒𝕗𝕒</h1>
+            <div id="inputs">
+                <input type="number" placeholder="Adultos" id="adultos">
+                <input type="number" placeholder="Não-adultos" id="naoAdultos">
+                <input type="number" placeholder="Duração" id="duracao">
+                <button id="calcular">Calcular</button>
+            </div>
+            <br><br><br>
+
+            <div id="recursos">
+
+                <div id="centerComida">
+
+                    <div id="comidas">
+                        <p>Carne (Kg)<br><br><span class="rec" id="carne">Kg</span></p>
+                        <p>Frango (Kg)<br><br><span class="rec" id="frango">Kg</span></p>
+                        <p>Coração (Kg)<br><br><span class="rec" id="coracao">Kg</span></p>
+                        <p>Pão de alho (Gramas)<br><br><span class="rec" id="pao">Grama</span></p>
+                        <p>Linguiça (Kg)<br><br><span class="rec" id="linguica">Kg</span></p>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <div id="centerBebidas">
+                    <div id="bebidas">
+                        <p>Àgua (Litro)<br><br><span class="rec" id="h20">Litro</span></p>
+                        <p>Refrigerante (Litro)<br><br><span class="rec" id="refri">Litro</span></p>
+                        <p>Cerveja (Litro)<br><br><span class="rec" id="cerva">Litro</span></p>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,40 +1,105 @@
-main{
-    width: 290px;
-    height: 370;
-    background-color: rgb(135, 52, 243);
-    border-style: solid;
-    border-radius: 5px;
-    border-color: rgb(135, 52, 243);
-    margin: auto;
-    margin-top: 50px;
-    padding-left: 15px;
-}
-
-.mb{
-    margin-bottom: 20px;
-}
-
-.num{
-    width:250px ;
-    padding: 8px;
-    border-style: solid;
-    border-radius: 8px;
-}
-
-body{
+body {
     background-color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+
 }
 
-#sub{
+#full {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgb(44, 41, 41);
     padding: 10px;
-    border-style: solid;
-    border-radius: 8px;
-    border-color: rgb(135, 52, 243);
 }
 
-#sub:hover{
-    background-color: rgb(155, 110, 214);
+#Chu {
+    padding: 30px;
+    background-color: rgb(8, 8, 8);
+    border-radius: 30px;
+}
+
+#h1Chu {
+    text-align: center;
     color: white;
-    border-color: rgb(155, 110, 214);
+}
+
+#recursos {
+    width: 100%;
+}
+
+#recursos p {
+    display: inline-block;
+    color: black;
+    padding: 15px;
+    text-align: center;
+    
+
+
+}
+
+#centerComida {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#centerBebidas {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+button {
+    padding: 13px;
+    border-radius: 25px;
+    background-color: rgb(44, 41, 41);
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: aliceblue;
+    color: black;
+}
+
+#comidas {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: rgb(44, 41, 41);
+    border-radius: 30px;
+}
+
+#bebidas {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: rgb(44, 41, 41);
+    border-radius: 20px;
+}
+
+.rec {
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#h1desc{
+    color: white;
+    font-family:'Times New Roman', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: black;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+#desc{
+    color: beige;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
 }

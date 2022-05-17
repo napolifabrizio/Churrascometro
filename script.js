@@ -1,27 +1,55 @@
+// carnes - 400 gr por pessoa / +6 horas 650 gr
+// cerveja - 1200 ml por pessoa / +6 horas 2000 ml
+// refrigerante e agua - 1000 ml por pessoa / +6 horas 1500 ml
+
+// não-adultos valem por 0,5
 
 
-function ch(){
+//comidas 
+let carne = document.getElementById('carne')
+let frango = document.getElementById('frango')
+let coracao = document.getElementById('coracao')
+let pao = document.getElementById('pao')
+let linguica = document.getElementById('linguica')
 
-    let adultos = document.getElementsByTagName('input')[0]
-    let crianças = document.getElementsByTagName('input')[1]
-    let duração = document.getElementsByTagName('input')[2]
-    
-    let carne = document.getElementsByTagName('p')[0]
-    let cerveja = document.getElementsByTagName('p')[1]
-    let refri = document.getElementsByTagName('p')[2]
-    
-    if(duração.value > 6){
-        carne.innerText = parseInt(Math.ceil(adultos.value / 1.5)) + parseInt(Math.ceil(crianças.value / 3)) + ' Kg de carne'
-        cerveja.innerText = adultos.value * 5 + ' Latas de cerveja'
+//bebidas
+let agua = document.getElementById('h20')
+let refri = document.getElementById('refri')
+let cerva = document.getElementById('cerva')
 
-        refri.innerText = parseInt(Math.ceil(parseInt(crianças.value) * (750/2000))) +parseInt(Math.ceil(adultos.value * (250/2000))) + ' Garrafas de refrigerante e água 2L'
+//inputs
+let adultos = document.getElementById('adultos')
+let NAOadultos = document.getElementById('naoAdultos')
+let duracao = document.getElementById('duracao')
+
+//button
+let calc = document.getElementById('calcular')
+
+calc.addEventListener('click', churras)
+
+function churras(){
+    if(duracao.value<=6){
+        carne.innerHTML = (parseInt(adultos.value * 188) + parseInt((NAOadultos.value*94)))/1000
+        frango.innerHTML = (parseInt((adultos.value * 53)) + parseInt((NAOadultos.value*27)))/1000
+        coracao.innerHTML = (parseInt((adultos.value * 53)) + parseInt((NAOadultos.value*27)))/1000
+        pao.innerHTML = parseInt((adultos.value * 53)) + parseInt((NAOadultos.value*27))
+        linguica.innerHTML = (parseInt((adultos.value * 53)) + parseInt((NAOadultos.value*27)))/1000
+
+        cerva.innerHTML = (adultos.value * 1200)/1000
+        refri.innerHTML = (parseInt(adultos.value * 334) + parseInt(NAOadultos.value * 166))/1000
+        agua.innerHTML = (parseInt(adultos.value * 334) + parseInt(NAOadultos.value * 166))/1000
 
     }else{
-        carne.innerText = parseInt(Math.ceil(adultos.value / 2.5)) + parseInt(Math.ceil(crianças.value / 4)) + ' Kg de carne'
-        cerveja.innerText = adultos.value * 3 + ' Latas de cerveja'
 
-        refri.innerText = parseInt(Math.ceil(crianças.value * (500/2000))) + parseInt(Math.ceil(adultos.value * (125/2000))) + ' Garrafas de refrigerante e água 2L'
+
+        carne.innerHTML = (parseInt(adultos.value * 330) + parseInt((NAOadultos.value*165)))/1000
+        frango.innerHTML = (parseInt((adultos.value * 80)) + parseInt((NAOadultos.value*40)))/1000
+        coracao.innerHTML = (parseInt((adultos.value * 80)) + parseInt((NAOadultos.value*40)))/1000
+        pao.innerHTML = parseInt((adultos.value * 80)) + parseInt((NAOadultos.value*40))
+        linguica.innerHTML = (parseInt((adultos.value * 80)) + parseInt((NAOadultos.value*40)))/1000
+
+        cerva.innerHTML = (adultos.value * 2000)/1000
+        refri.innerHTML = (parseInt(adultos.value * 500) + parseInt(NAOadultos.value * 250))/1000
+        agua.innerHTML = (parseInt(adultos.value * 500) + parseInt(NAOadultos.value * 250))/1000
     }
-
-    
 }
